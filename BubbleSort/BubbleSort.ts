@@ -7,3 +7,5 @@ export default function BubbleSort(arr: number[]): void {
     }
   }
 }
+
+// O(N^2)

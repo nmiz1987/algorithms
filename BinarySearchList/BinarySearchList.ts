@@ -15,3 +15,5 @@ export default function BinarySearchList(arr: number[], target: number): boolean
   } while (lo < hi);
   return false;
 }
+
+// O(log(N))
