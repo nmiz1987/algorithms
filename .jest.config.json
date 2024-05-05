@@ -1,4 +1,4 @@
 {
-  "clearMocks": true,
-  "preset": "ts-jest"
+    "clearMocks": true,
+    "preset": "ts-jest"
 }

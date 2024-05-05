@@ -1,57 +1,57 @@
 type Node<T> = {
-  value: T;
-  next?: Node<T>;
+    value: T;
+    next?: Node<T>;
 };
 
 export default class Queue<T> {
-  public length: number;
-  private head?: Node<T>;
-  private tail?: Node<T>;
+    public length: number;
+    private head?: Node<T>;
+    private tail?: Node<T>;
 
-  constructor() {
-    this.length = 0;
-    this.head = this.tail = undefined;
-  }
-
-  enqueue(item: T): void {
-    const node = { value: item } as Node<T>;
-    this.length++;
-    if (!this.tail) {
-      this.head = this.tail = node;
-      return;
+    constructor() {
+        this.length = 0;
+        this.head = this.tail = undefined;
     }
 
-    this.tail.next = node;
-    this.tail = node;
-  }
+    enqueue(item: T): void {
+        const node = { value: item } as Node<T>;
+        this.length++;
+        if (!this.tail) {
+            this.head = this.tail = node;
+            return;
+        }
 
-  deque(): T | undefined {
-    if (!this.head) {
-      return undefined;
-    }
-    this.length--;
-    const head = this.head;
-    this.head = this.head.next;
-    head.next = undefined;
-
-    if (this.length === 0) {
-      this.tail = undefined;
+        this.tail.next = node;
+        this.tail = node;
     }
 
-    return head.value;
-  }
+    deque(): T | undefined {
+        if (!this.head) {
+            return undefined;
+        }
+        this.length--;
+        const head = this.head;
+        this.head = this.head.next;
+        head.next = undefined;
 
-  peek(): T | undefined {
-    return this.head?.value;
-  }
+        if (this.length === 0) {
+            this.tail = undefined;
+        }
 
-  print(): void {
-    let current = this.head;
-    while (current) {
-      console.log(current.value);
-      current = current.next;
+        return head.value;
     }
-  }
+
+    peek(): T | undefined {
+        return this.head?.value;
+    }
+
+    print(): void {
+        let current = this.head;
+        while (current) {
+            console.log(current.value);
+            current = current.next;
+        }
+    }
 }
 
 const list = new Queue<number>();

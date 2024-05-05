@@ -1,19 +1,18 @@
 {
-  "name": "algo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "jest": "^29.7.0",
-    "typescript": "^5.4.5",
-    "ts-jest": "^28.0.5",
-    "ts-node": "^10.8.1"
-  }
+    "name": "algo",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "format": "prettier --write ."
+    },
+    "author": "Netanel Mizrahi",
+    "license": "ISC",
+    "dependencies": {
+        "jest": "^29.7.0",
+        "prettier": "^3.2.5",
+        "ts-jest": "^28.0.5",
+        "ts-node": "^10.8.1",
+        "typescript": "^5.4.5"
+    }
 }
