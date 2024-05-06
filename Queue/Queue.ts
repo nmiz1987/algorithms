@@ -48,7 +48,6 @@ export default class Queue<T> {
     print(): void {
         let current = this.head;
         while (current) {
-            console.log(current.value);
             current = current.next;
         }
     }
