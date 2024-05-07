@@ -1,11 +1,6 @@
 import { expect, test } from "@jest/globals";
-import bt_pre_order from "./BTPreOrder";
 
-declare type BinaryNode<T> = {
-    value: T;
-    left: BinaryNode<T> | null;
-    right: BinaryNode<T> | null;
-};
+import bfs from "./BTBFS";
 
 export const tree: BinaryNode<number> = {
     value: 20,
@@ -48,6 +43,9 @@ export const tree: BinaryNode<number> = {
         },
     },
 };
-test("Pre order", function () {
-    expect(bt_pre_order(tree)).toEqual([20, 10, 5, 7, 15, 50, 30, 29, 45, 100]);
+
+test("bt bfs", function () {
+    expect(bfs(tree, 45)).toEqual(true);
+    expect(bfs(tree, 7)).toEqual(true);
+    expect(bfs(tree, 69)).toEqual(false);
 });

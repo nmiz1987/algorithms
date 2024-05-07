@@ -1,11 +1,6 @@
 import { expect, test } from "@jest/globals";
-import bt_post_order from "./BTPreOrder";
+import bt_in_order from "./BTInOrder";
 
-declare type BinaryNode<T> = {
-    value: T;
-    left: BinaryNode<T> | null;
-    right: BinaryNode<T> | null;
-};
 export const tree: BinaryNode<number> = {
     value: 20,
     right: {
@@ -48,8 +43,6 @@ export const tree: BinaryNode<number> = {
     },
 };
 
-test("post order", function () {
-    expect(bt_post_order(tree)).toEqual([
-        7, 5, 15, 10, 29, 45, 30, 100, 50, 20,
-    ]);
+test("In order", function () {
+    expect(bt_in_order(tree)).toEqual([5, 7, 10, 15, 20, 29, 30, 45, 50, 100]);
 });

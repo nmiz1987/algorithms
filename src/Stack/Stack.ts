@@ -1,11 +1,6 @@
-type Node<T> = {
-    value: T;
-    prev?: Node<T>;
-};
-
 export default class Stack<T> {
     public length: number;
-    private head?: Node<T>;
+    private head?: ListNode<T>;
 
     constructor() {
         this.head = undefined;
@@ -13,7 +8,7 @@ export default class Stack<T> {
     }
 
     push(item: T): void {
-        const node = { value: item } as Node<T>;
+        const node = { value: item } as ListNode<T>;
         this.length++;
         if (!this.head) {
             this.head = node;
@@ -30,7 +25,7 @@ export default class Stack<T> {
             this.head = undefined;
             return head?.value;
         }
-        const head = this.head as Node<T>;
+        const head = this.head as ListNode<T>;
         this.head = head.prev;
         return head.value;
     }
