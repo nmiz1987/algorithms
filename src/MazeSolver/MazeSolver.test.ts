@@ -1,4 +1,4 @@
-import maze_solver, { Point } from "./MazeSolver";
+import maze_solver from "./MazeSolver";
 import { expect, test } from "@jest/globals";
 
 test("maze solver", function () {

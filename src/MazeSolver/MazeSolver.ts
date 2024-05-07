@@ -1,8 +1,3 @@
-export type Point = {
-    x: number;
-    y: number;
-};
-
 const dir = [
     [-1, 0],
     [1, 0],

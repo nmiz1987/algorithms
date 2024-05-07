@@ -6,6 +6,11 @@ declare type BinaryNode<T> = {
 
 declare type ListNode<T> = {
     value: T;
-    prev?: Node<T>;
-    next?: Node<T>;
+    prev?: ListNode<T>;
+    next?: ListNode<T>;
+};
+
+declare type Point = {
+    x: number;
+    y: number;
 };
