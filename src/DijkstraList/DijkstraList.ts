@@ -57,3 +57,5 @@ export default function dijkstra_list(
     out.push(source);
     return out.reverse();
 }
+
+// O(V^2 + E) time complexity
